@@ -33,7 +33,7 @@ export function PropertyCard({
         <img
           src={image}
           alt={title}
-          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+          className="w-full h-40 md:h-48 object-cover transition-transform duration-300 group-hover:scale-110"
         />
         {featured && (
           <Badge className="absolute top-3 left-3 bg-accent text-accent-foreground">

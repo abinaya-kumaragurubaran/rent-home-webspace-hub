@@ -82,28 +82,20 @@ const services = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-card/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center gap-2">
-              <Home className="w-8 h-8 text-primary" />
-              <span className="text-xl font-bold text-foreground">RentHub</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-foreground hover:text-primary transition-colors">Properties</a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors">About</a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors">Contact</a>
-              <Button variant="outline" size="sm">Sign In</Button>
-              <Button size="sm">List Property</Button>
-            </div>
+    <div className="min-h-screen bg-background pb-20">
+      {/* Mobile Header */}
+      <div className="bg-card/95 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50 md:hidden">
+        <div className="p-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Home className="w-8 h-8 text-primary" />
+            <span className="text-xl font-bold text-foreground">RentHub</span>
           </div>
+          <Button variant="outline" size="sm">Sign In</Button>
         </div>
-      </nav>
+      </div>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[80vh] md:h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -111,15 +103,15 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-6 mb-10">
+          <div className="space-y-4 md:space-y-6 mb-8 md:mb-10">
             <Badge className="bg-card/20 backdrop-blur-sm text-card border-card/30">
               Trusted by 50,000+ Renters
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-card leading-tight">
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-card leading-tight">
               Find Your Perfect
               <span className="block text-accent">Rental Home</span>
             </h1>
-            <p className="text-xl text-card/90 max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-card/90 max-w-2xl mx-auto px-4">
               Discover amazing properties with verified listings, competitive prices, 
               and exceptional service. Your dream home is just a search away.
             </p>
