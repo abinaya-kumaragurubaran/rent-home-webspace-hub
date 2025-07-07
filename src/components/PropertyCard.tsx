@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Bed, Bath, Maximize } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface PropertyCardProps {
   id: string;
@@ -17,6 +18,7 @@ interface PropertyCardProps {
 }
 
 export function PropertyCard({
+  id,
   title,
   location,
   price,
@@ -27,6 +29,14 @@ export function PropertyCard({
   image,
   featured = false,
 }: PropertyCardProps) {
+  const { toast } = useToast();
+
+  const handleViewDetails = () => {
+    toast({
+      title: "Property Details",
+      description: `Viewing details for ${title} - $${price.toLocaleString()}/month`,
+    });
+  };
   return (
     <Card className="group overflow-hidden bg-gradient-card shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-[1.02] border-0">
       <div className="relative overflow-hidden">
@@ -82,7 +92,7 @@ export function PropertyCard({
               </span>
               <span className="text-muted-foreground text-sm">/month</span>
             </div>
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" onClick={handleViewDetails}>
               View Details
             </Button>
           </div>

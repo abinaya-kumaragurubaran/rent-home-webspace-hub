@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Home, Users, Shield, Award, Star, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const stats = [
   { icon: Home, label: "Properties", value: "10,000+" },
@@ -131,8 +132,8 @@ export default function About() {
             <p className="text-muted-foreground mb-4">
               Join thousands of satisfied renters and discover your perfect rental today.
             </p>
-            <Button className="w-full" size="lg">
-              Start Your Search
+            <Button className="w-full" size="lg" asChild>
+              <Link to="/properties">Start Your Search</Link>
             </Button>
           </CardContent>
         </Card>

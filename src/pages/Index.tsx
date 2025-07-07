@@ -14,6 +14,7 @@ import {
   Mail,
   Award
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import heroImage from "@/assets/hero-home.jpg";
 import property1 from "@/assets/property-1.jpg";
@@ -90,7 +91,9 @@ const Index = () => {
             <Home className="w-8 h-8 text-primary" />
             <span className="text-xl font-bold text-foreground">RentHub</span>
           </div>
-          <Button variant="outline" size="sm">Sign In</Button>
+          <Button variant="outline" size="sm" asChild>
+            <Link to="/login">Sign In</Link>
+          </Button>
         </div>
       </div>
 
@@ -155,8 +158,8 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
-              View All Properties
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/properties">View All Properties</Link>
             </Button>
           </div>
         </div>
@@ -239,11 +242,11 @@ const Index = () => {
           </div>
           
           <div className="text-center space-x-4">
-            <Button size="lg" variant="accent">
-              Get Started
+            <Button size="lg" variant="accent" asChild>
+              <Link to="/properties">Get Started</Link>
             </Button>
-            <Button size="lg" variant="outline">
-              Learn More
+            <Button size="lg" variant="outline" asChild>
+              <Link to="/about">Learn More</Link>
             </Button>
           </div>
         </div>
@@ -277,9 +280,9 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-background/80">
-                <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
+                <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+                <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
               </ul>
             </div>
