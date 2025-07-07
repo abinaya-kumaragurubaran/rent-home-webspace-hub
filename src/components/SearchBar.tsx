@@ -74,10 +74,10 @@ export function SearchBar() {
               <SelectValue placeholder="Select range" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="0-1000">$0 - $1,000</SelectItem>
-              <SelectItem value="1000-2000">$1,000 - $2,000</SelectItem>
-              <SelectItem value="2000-3000">$2,000 - $3,000</SelectItem>
-              <SelectItem value="3000+">$3,000+</SelectItem>
+              <SelectItem value="0-83000">₹0 - ₹83,000</SelectItem>
+              <SelectItem value="83000-166000">₹83,000 - ₹1,66,000</SelectItem>
+              <SelectItem value="166000-249000">₹1,66,000 - ₹2,49,000</SelectItem>
+              <SelectItem value="249000+">₹2,49,000+</SelectItem>
             </SelectContent>
           </Select>
         </div>

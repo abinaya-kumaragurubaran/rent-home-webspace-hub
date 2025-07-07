@@ -16,8 +16,8 @@ const allProperties = [
   {
     id: "1",
     title: "Luxury Downtown Apartment",
-    location: "Downtown, New York",
-    price: 3200,
+    location: "Downtown, Mumbai",
+    price: 265600,
     rating: 4.9,
     beds: 2,
     baths: 2,
@@ -29,8 +29,8 @@ const allProperties = [
   {
     id: "2",
     title: "Modern Family House",
-    location: "Suburban Area, California",
-    price: 2800,
+    location: "Suburban Area, Bangalore",
+    price: 232400,
     rating: 4.7,
     beds: 4,
     baths: 3,
@@ -41,8 +41,8 @@ const allProperties = [
   {
     id: "3",
     title: "Stylish City Condo",
-    location: "Midtown, Chicago",
-    price: 2500,
+    location: "Midtown, Delhi",
+    price: 207500,
     rating: 4.8,
     beds: 1,
     baths: 1,
@@ -53,8 +53,8 @@ const allProperties = [
   {
     id: "4",
     title: "Cozy Studio Apartment",
-    location: "Brooklyn, New York",
-    price: 1800,
+    location: "Andheri, Mumbai",
+    price: 149400,
     rating: 4.6,
     beds: 0,
     baths: 1,
@@ -65,8 +65,8 @@ const allProperties = [
   {
     id: "5",
     title: "Spacious Villa",
-    location: "Beverly Hills, California",
-    price: 8500,
+    location: "Gurgaon, Delhi NCR",
+    price: 705500,
     rating: 4.9,
     beds: 5,
     baths: 4,
@@ -80,7 +80,7 @@ export default function Properties() {
   const [searchQuery, setSearchQuery] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [location, setLocation] = useState("");
-  const [priceRange, setPriceRange] = useState([0, 10000]);
+  const [priceRange, setPriceRange] = useState([0, 830000]);
 
   const filteredProperties = allProperties.filter((property) => {
     const matchesSearch = property.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -128,14 +128,14 @@ export default function Properties() {
       <div className="space-y-4">
         <label className="text-sm font-medium text-foreground flex items-center gap-2">
           <DollarSign className="w-4 h-4" />
-          Price Range: ${priceRange[0]} - ${priceRange[1]}
+          Price Range: ₹{priceRange[0].toLocaleString()} - ₹{priceRange[1].toLocaleString()}
         </label>
         <Slider
           value={priceRange}
           onValueChange={setPriceRange}
-          max={10000}
+          max={830000}
           min={0}
-          step={100}
+          step={10000}
           className="w-full"
         />
       </div>
@@ -144,7 +144,7 @@ export default function Properties() {
         onClick={() => {
           setPropertyType("");
           setLocation("");
-          setPriceRange([0, 10000]);
+          setPriceRange([0, 830000]);
         }}
         variant="outline" 
         className="w-full"

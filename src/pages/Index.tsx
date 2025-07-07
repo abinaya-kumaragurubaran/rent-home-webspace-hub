@@ -25,8 +25,8 @@ const featuredProperties = [
   {
     id: "1",
     title: "Luxury Downtown Apartment",
-    location: "Downtown, New York",
-    price: 3200,
+    location: "Downtown, Mumbai",
+    price: 265600,
     rating: 4.9,
     beds: 2,
     baths: 2,
@@ -37,8 +37,8 @@ const featuredProperties = [
   {
     id: "2",
     title: "Modern Family House",
-    location: "Suburban Area, California",
-    price: 2800,
+    location: "Suburban Area, Bangalore",
+    price: 232400,
     rating: 4.7,
     beds: 4,
     baths: 3,
@@ -48,8 +48,8 @@ const featuredProperties = [
   {
     id: "3",
     title: "Stylish City Condo",
-    location: "Midtown, Chicago",
-    price: 2500,
+    location: "Midtown, Delhi",
+    price: 207500,
     rating: 4.8,
     beds: 1,
     baths: 1,

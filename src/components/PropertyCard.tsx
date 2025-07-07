@@ -34,7 +34,7 @@ export function PropertyCard({
   const handleViewDetails = () => {
     toast({
       title: "Property Details",
-      description: `Viewing details for ${title} - $${price.toLocaleString()}/month`,
+      description: `Viewing details for ${title} - ₹${(price * 83).toLocaleString()}/month`,
     });
   };
   return (
@@ -88,7 +88,7 @@ export function PropertyCard({
           <div className="flex items-center justify-between pt-2">
             <div>
               <span className="text-2xl font-bold text-primary">
-                ${price.toLocaleString()}
+                ₹{(price * 83).toLocaleString()}
               </span>
               <span className="text-muted-foreground text-sm">/month</span>
             </div>
